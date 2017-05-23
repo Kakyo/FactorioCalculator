@@ -9,31 +9,31 @@
             </select>
         </div>
 
-        <div class="col-sm-3" data-bind="with:selectedRecipe">
+        <div class="col-sm-3">
             <label>Time</label>
             <div class="input-group" title="Time">
                 <span class="input-group-addon">
             <span class="glyphicon glyphicon-time"></span>
                 </span>
-                <input class="form-control readonly" readonly data-bind="value:time">
+                <input class="form-control readonly" readonly data-bind="value: time()">
             </div>
         </div>
 
-        <div class="col-sm-6" data-bind="with:selectedRecipe">
-            <label data-bind="text:('Output'+$parent.outputText())"></label>
+        <div class="col-sm-6">
+            <label data-bind="text:('Output'+outputText())"></label>
             <div class="row form-inline">
-                <!-- ko foreach:Object.keys(output) -->
-                <item-icon params="id: $data, value:$parent.output[$data], readonly:1" data-bind="css:$parents[1].outputSize"></item-icon>
+                <!-- ko foreach:Object.keys(output()) -->
+                <item-icon params="id: $data, value: $parent.output()[$data], readonly:1" data-bind="css:$parent.outputSize()"></item-icon>
                 <!-- /ko -->
             </div>
         </div>
     </div>
 
-    <div data-bind="with:selectedRecipe">
+    <div>
         <label>Input</label>
         <div class="row form-inline">
-            <!-- ko foreach:Object.keys(input) -->
-            <item-icon params="id: $data, value:$parent.input[$data], readonly:1" data-bind="css:$parents[1].inputSize"></item-icon>
+            <!-- ko foreach:Object.keys(input()) -->
+            <item-icon params="id: $data, value:$parent.input()[$data], readonly:1" data-bind="css:$parent.inputSize()"></item-icon>
             <!-- /ko -->
         </div>
     </div>

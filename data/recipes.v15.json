@@ -1656,772 +1656,3432 @@
         "accept_productivity": false,
         "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "inserter": 5,
-            "electronic-circuit": 5,
-            "iron-gear-wheel": 5,
-            "iron-plate": 5,
-            "transport-belt": 5
+          "steel-plate": 2,
+          "plastic-bar": 2,
+          "explosives": 1
         },
         "output": {
-            "loader": 1
+          "cannon-shell": 1
         }
-    }, {
-        "id": "fast-loader",
-        "time": 3,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
+      },
+      "expensive": {
+        "time": 8,
         "input": {
-            "fast-transport-belt": 5,
-            "loader": 1
+          "steel-plate": 4,
+          "plastic-bar": 4,
+          "explosives": 1
         },
         "output": {
-            "fast-loader": 1
+          "cannon-shell": 1
         }
-    }, {
-        "id": "express-loader",
+      }
+    },
+    {
+      "id": "explosive-cannon-shell",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 8,
+        "input": {
+          "steel-plate": 2,
+          "plastic-bar": 2,
+          "explosives": 2
+        },
+        "output": {
+          "explosive-cannon-shell": 1
+        }
+      },
+      "expensive": {
+        "time": 8,
+        "input": {
+          "steel-plate": 4,
+          "plastic-bar": 4,
+          "explosives": 2
+        },
+        "output": {
+          "explosive-cannon-shell": 1
+        }
+      }
+    },
+    {
+      "id": "uranium-cannon-shell",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 12,
+      "input": {
+        "cannon-shell": 1,
+        "uranium-238": 1
+      },
+      "output": {
+        "uranium-cannon-shell": 1
+      }
+    },
+    {
+      "id": "explosive-uranium-cannon-shell",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 12,
+      "input": {
+        "explosive-cannon-shell": 1,
+        "uranium-238": 1
+      },
+      "output": {
+        "explosive-uranium-cannon-shell": 1
+      }
+    },
+    {
+      "id": "flamethrower-ammo",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": false,
+      "time": 6,
+      "input": {
+        "steel-plate": 5,
+        "light-oil": 50,
+        "heavy-oil": 50
+      },
+      "output": {
+        "flamethrower-ammo": 1
+      }
+    },
+    {
+      "id": "poison-capsule",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 8,
+      "input": {
+        "steel-plate": 3,
+        "electronic-circuit": 3,
+        "coal": 10
+      },
+      "output": {
+        "poison-capsule": 1
+      }
+    },
+    {
+      "id": "slowdown-capsule",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 8,
+      "input": {
+        "steel-plate": 2,
+        "electronic-circuit": 2,
+        "coal": 5
+      },
+      "output": {
+        "slowdown-capsule": 1
+      }
+    },
+    {
+      "id": "grenade",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 8,
+      "input": {
+        "iron-plate": 5,
+        "coal": 10
+      },
+      "output": {
+        "grenade": 1
+      }
+    },
+    {
+      "id": "cluster-grenade",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 8,
+      "input": {
+        "grenade": 7,
+        "explosives": 5,
+        "steel-plate": 5
+      },
+      "output": {
+        "cluster-grenade": 1
+      }
+    },
+    {
+      "id": "defender-capsule",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 8,
+      "input": {
+        "piercing-rounds-magazine": 1,
+        "electronic-circuit": 2,
+        "iron-gear-wheel": 3
+      },
+      "output": {
+        "defender-capsule": 1
+      }
+    },
+    {
+      "id": "distractor-capsule",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 15,
+      "input": {
+        "defender-capsule": 4,
+        "advanced-circuit": 3
+      },
+      "output": {
+        "distractor-capsule": 1
+      }
+    },
+    {
+      "id": "destroyer-capsule",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 15,
+      "input": {
+        "distractor-capsule": 4,
+        "speed-module": 1
+      },
+      "output": {
+        "destroyer-capsule": 1
+      }
+    },
+    {
+      "id": "discharge-defense-remote",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 1
+      },
+      "output": {
+        "discharge-defense-remote": 1
+      }
+    },
+    {
+      "id": "copper-plate",
+      "building": [
+        "electric-furnace",
+        "steel-furnace",
+        "stone-furnace"
+      ],
+      "accept_productivity": true,
+      "time": 3.5,
+      "input": {
+        "copper-ore": 1
+      },
+      "output": {
+        "copper-plate": 1
+      }
+    },
+    {
+      "id": "iron-plate",
+      "building": [
+        "electric-furnace",
+        "steel-furnace",
+        "stone-furnace"
+      ],
+      "accept_productivity": true,
+      "time": 3.5,
+      "input": {
+        "iron-ore": 1
+      },
+      "output": {
+        "iron-plate": 1
+      }
+    },
+    {
+      "id": "stone-brick",
+      "building": [
+        "electric-furnace",
+        "steel-furnace",
+        "stone-furnace"
+      ],
+      "accept_productivity": true,
+      "time": 3.5,
+      "input": {
+        "stone": 2
+      },
+      "output": {
+        "stone-brick": 1
+      }
+    },
+    {
+      "id": "wood",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 0.5,
+      "input": {
+        "raw-wood": 1
+      },
+      "output": {
+        "wood": 2
+      }
+    },
+    {
+      "id": "wooden-chest",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "wood": 4
+      },
+      "output": {
+        "wooden-chest": 1
+      }
+    },
+    {
+      "id": "iron-stick",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 0.5,
+      "input": {
+        "iron-plate": 1
+      },
+      "output": {
+        "iron-stick": 2
+      }
+    },
+    {
+      "id": "iron-axe",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-stick": 2,
+        "iron-plate": 3
+      },
+      "output": {
+        "iron-axe": 1
+      }
+    },
+    {
+      "id": "stone-furnace",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "stone": 5
+      },
+      "output": {
+        "stone-furnace": 1
+      }
+    },
+    {
+      "id": "boiler",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "stone-furnace": 1,
+        "pipe": 4
+      },
+      "output": {
+        "boiler": 1
+      }
+    },
+    {
+      "id": "steam-engine",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 0.5,
+        "input": {
+          "iron-gear-wheel": 8,
+          "pipe": 5,
+          "iron-plate": 10
+        },
+        "output": {
+          "steam-engine": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "input": {
+          "iron-gear-wheel": 10,
+          "pipe": 5,
+          "iron-plate": 50
+        },
+        "output": {
+          "steam-engine": 1
+        }
+      }
+    },
+    {
+      "id": "iron-gear-wheel",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "normal": {
+        "time": 0.5,
+        "input": {
+          "iron-plate": 2
+        },
+        "output": {
+          "iron-gear-wheel": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "input": {
+          "iron-plate": 4
+        },
+        "output": {
+          "iron-gear-wheel": 1
+        }
+      }
+    },
+    {
+      "id": "electronic-circuit",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 0.5,
+        "input": {
+          "iron-plate": 1,
+          "copper-cable": 3
+        },
+        "output": {
+          "electronic-circuit": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "input": {
+          "iron-plate": 2,
+          "copper-cable": 10
+        },
+        "output": {
+          "electronic-circuit": 1
+        }
+      }
+    },
+    {
+      "id": "transport-belt",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-plate": 1,
+        "iron-gear-wheel": 1
+      },
+      "output": {
+        "transport-belt": 2
+      }
+    },
+    {
+      "id": "electric-mining-drill",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 2,
+        "input": {
+          "electronic-circuit": 3,
+          "iron-gear-wheel": 5,
+          "iron-plate": 10
+        },
+        "output": {
+          "electric-mining-drill": 1
+        }
+      },
+      "expensive": {
+        "time": 2,
+        "input": {
+          "electronic-circuit": 5,
+          "iron-gear-wheel": 10,
+          "iron-plate": 20
+        },
+        "output": {
+          "electric-mining-drill": 1
+        }
+      }
+    },
+    {
+      "id": "burner-mining-drill",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 2,
+        "input": {
+          "iron-gear-wheel": 3,
+          "stone-furnace": 1,
+          "iron-plate": 3
+        },
+        "output": {
+          "burner-mining-drill": 1
+        }
+      },
+      "expensive": {
+        "time": 4,
+        "input": {
+          "iron-gear-wheel": 6,
+          "stone-furnace": 2,
+          "iron-plate": 6
+        },
+        "output": {
+          "burner-mining-drill": 1
+        }
+      }
+    },
+    {
+      "id": "inserter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 1,
+        "iron-gear-wheel": 1,
+        "iron-plate": 1
+      },
+      "output": {
+        "inserter": 1
+      }
+    },
+    {
+      "id": "burner-inserter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-plate": 1,
+        "iron-gear-wheel": 1
+      },
+      "output": {
+        "burner-inserter": 1
+      }
+    },
+    {
+      "id": "pipe",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 0.5,
+        "input": {
+          "iron-plate": 1
+        },
+        "output": {
+          "pipe": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "input": {
+          "iron-plate": 2
+        },
+        "output": {
+          "pipe": 1
+        }
+      }
+    },
+    {
+      "id": "offshore-pump",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 2,
+        "pipe": 1,
+        "iron-gear-wheel": 1
+      },
+      "output": {
+        "offshore-pump": 1
+      }
+    },
+    {
+      "id": "copper-cable",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 0.5,
+      "input": {
+        "copper-plate": 1
+      },
+      "output": {
+        "copper-cable": 2
+      }
+    },
+    {
+      "id": "small-electric-pole",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "wood": 2,
+        "copper-cable": 2
+      },
+      "output": {
+        "small-electric-pole": 2
+      }
+    },
+    {
+      "id": "pistol",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 5,
+      "input": {
+        "copper-plate": 5,
+        "iron-plate": 5
+      },
+      "output": {
+        "pistol": 1
+      }
+    },
+    {
+      "id": "submachine-gun",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
         "time": 10,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "express-transport-belt": 5,
-            "fast-loader": 1
+          "iron-gear-wheel": 10,
+          "copper-plate": 5,
+          "iron-plate": 10
         },
         "output": {
-            "express-loader": 1
+          "submachine-gun": 1
         }
-    }, {
-        "id": "splitter",
-        "time": 1,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
+      },
+      "expensive": {
+        "time": 10,
         "input": {
-            "electronic-circuit": 5,
-            "iron-plate": 5,
-            "transport-belt": 4
+          "iron-gear-wheel": 15,
+          "copper-plate": 20,
+          "iron-plate": 30
         },
         "output": {
-            "splitter": 1
+          "submachine-gun": 1
         }
-    }, {
-        "id": "fast-splitter",
-        "time": 2,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
+      }
+    },
+    {
+      "id": "firearm-magazine",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 1,
+      "input": {
+        "iron-plate": 4
+      },
+      "output": {
+        "firearm-magazine": 1
+      }
+    },
+    {
+      "id": "light-armor",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "iron-plate": 40
+      },
+      "output": {
+        "light-armor": 1
+      }
+    },
+    {
+      "id": "radar",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 5,
+        "iron-gear-wheel": 5,
+        "iron-plate": 10
+      },
+      "output": {
+        "radar": 1
+      }
+    },
+    {
+      "id": "small-lamp",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 1,
+        "iron-stick": 3,
+        "iron-plate": 1
+      },
+      "output": {
+        "small-lamp": 1
+      }
+    },
+    {
+      "id": "pipe-to-ground",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "pipe": 10,
+        "iron-plate": 5
+      },
+      "output": {
+        "pipe-to-ground": 2
+      }
+    },
+    {
+      "id": "assembling-machine-1",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 3,
+        "iron-gear-wheel": 5,
+        "iron-plate": 9
+      },
+      "output": {
+        "assembling-machine-1": 1
+      }
+    },
+    {
+      "id": "repair-pack",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 2,
+        "iron-gear-wheel": 2
+      },
+      "output": {
+        "repair-pack": 1
+      }
+    },
+    {
+      "id": "gun-turret",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 8,
+      "input": {
+        "iron-gear-wheel": 10,
+        "copper-plate": 10,
+        "iron-plate": 20
+      },
+      "output": {
+        "gun-turret": 1
+      }
+    },
+    {
+      "id": "night-vision-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "advanced-circuit": 5,
+        "steel-plate": 10
+      },
+      "output": {
+        "night-vision-equipment": 1
+      }
+    },
+    {
+      "id": "energy-shield-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "advanced-circuit": 5,
+        "steel-plate": 10
+      },
+      "output": {
+        "energy-shield-equipment": 1
+      }
+    },
+    {
+      "id": "energy-shield-mk2-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "energy-shield-equipment": 10,
+        "processing-unit": 10
+      },
+      "output": {
+        "energy-shield-mk2-equipment": 1
+      }
+    },
+    {
+      "id": "battery-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "battery": 5,
+        "steel-plate": 10
+      },
+      "output": {
+        "battery-equipment": 1
+      }
+    },
+    {
+      "id": "battery-mk2-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "battery-equipment": 10,
+        "processing-unit": 20
+      },
+      "output": {
+        "battery-mk2-equipment": 1
+      }
+    },
+    {
+      "id": "solar-panel-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "solar-panel": 5,
+        "advanced-circuit": 1,
+        "steel-plate": 5
+      },
+      "output": {
+        "solar-panel-equipment": 1
+      }
+    },
+    {
+      "id": "fusion-reactor-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "processing-unit": 250
+      },
+      "output": {
+        "fusion-reactor-equipment": 1
+      }
+    },
+    {
+      "id": "personal-laser-defense-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "processing-unit": 1,
+        "steel-plate": 5,
+        "laser-turret": 5
+      },
+      "output": {
+        "personal-laser-defense-equipment": 1
+      }
+    },
+    {
+      "id": "discharge-defense-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "processing-unit": 5,
+        "steel-plate": 20,
+        "laser-turret": 10
+      },
+      "output": {
+        "discharge-defense-equipment": 1
+      }
+    },
+    {
+      "id": "exoskeleton-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "processing-unit": 10,
+        "electric-engine-unit": 30,
+        "steel-plate": 20
+      },
+      "output": {
+        "exoskeleton-equipment": 1
+      }
+    },
+    {
+      "id": "personal-roboport-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "advanced-circuit": 10,
+        "iron-gear-wheel": 40,
+        "steel-plate": 20,
+        "battery": 45
+      },
+      "output": {
+        "personal-roboport-equipment": 1
+      }
+    },
+    {
+      "id": "personal-roboport-mk2-equipment",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 20,
+      "input": {
+        "personal-roboport-equipment": 5,
+        "processing-unit": 100
+      },
+      "output": {
+        "personal-roboport-mk2-equipment": 1
+      }
+    },
+    {
+      "id": "basic-oil-processing",
+      "building": [
+        "oil-refinery"
+      ],
+      "accept_productivity": false,
+      "time": 5,
+      "input": {
+        "crude-oil": 100
+      },
+      "output": {
+        "heavy-oil": 30,
+        "light-oil": 30,
+        "petroleum-gas": 40
+      }
+    },
+    {
+      "id": "advanced-oil-processing",
+      "building": [
+        "oil-refinery"
+      ],
+      "accept_productivity": false,
+      "time": 5,
+      "input": {
+        "water": 50,
+        "crude-oil": 100
+      },
+      "output": {
+        "heavy-oil": 10,
+        "light-oil": 45,
+        "petroleum-gas": 55
+      }
+    },
+    {
+      "id": "coal-liquefaction",
+      "building": [
+        "oil-refinery"
+      ],
+      "accept_productivity": false,
+      "time": 5,
+      "input": {
+        "coal": 10,
+        "heavy-oil": 25,
+        "steam": 50
+      },
+      "output": {
+        "heavy-oil": 35,
+        "light-oil": 15,
+        "petroleum-gas": 20
+      }
+    },
+    {
+      "id": "heavy-oil-cracking",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "water": 30,
+        "heavy-oil": 40
+      },
+      "output": {
+        "light-oil": 30
+      }
+    },
+    {
+      "id": "light-oil-cracking",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "water": 30,
+        "light-oil": 30
+      },
+      "output": {
+        "petroleum-gas": 20
+      }
+    },
+    {
+      "id": "sulfuric-acid",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": false,
+      "time": 1,
+      "input": {
+        "sulfur": 5,
+        "iron-plate": 1,
+        "water": 100
+      },
+      "output": {
+        "sulfuric-acid": 50
+      }
+    },
+    {
+      "id": "plastic-bar",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": true,
+      "time": 1,
+      "input": {
+        "petroleum-gas": 20,
+        "coal": 1
+      },
+      "output": {
+        "plastic-bar": 2
+      }
+    },
+    {
+      "id": "solid-fuel-from-light-oil",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "light-oil": 10
+      },
+      "output": {
+        "solid-fuel": 1
+      }
+    },
+    {
+      "id": "solid-fuel-from-petroleum-gas",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "petroleum-gas": 20
+      },
+      "output": {
+        "solid-fuel": 1
+      }
+    },
+    {
+      "id": "solid-fuel-from-heavy-oil",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "heavy-oil": 20
+      },
+      "output": {
+        "solid-fuel": 1
+      }
+    },
+    {
+      "id": "sulfur",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": true,
+      "time": 1,
+      "input": {
+        "water": 30,
+        "petroleum-gas": 30
+      },
+      "output": {
+        "sulfur": 2
+      }
+    },
+    {
+      "id": "lubricant",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": false,
+      "time": 1,
+      "input": {
+        "heavy-oil": 10
+      },
+      "output": {
+        "lubricant": 10
+      }
+    },
+    {
+      "id": "empty-barrel",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 1,
+      "input": {
+        "steel-plate": 1
+      },
+      "output": {
+        "empty-barrel": 1
+      }
+    },
+    {
+      "id": "steel-plate",
+      "building": [
+        "electric-furnace",
+        "steel-furnace",
+        "stone-furnace"
+      ],
+      "accept_productivity": true,
+      "normal": {
+        "time": 17.5,
         "input": {
-            "splitter": 1,
-            "iron-gear-wheel": 10,
-            "electronic-circuit": 10
+          "iron-plate": 5
         },
         "output": {
-            "fast-splitter": 1
+          "steel-plate": 1
         }
-    }, {
-        "id": "express-splitter",
-        "time": 2,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
+      },
+      "expensive": {
+        "time": 35,
         "input": {
-            "fast-splitter": 1,
-            "iron-gear-wheel": 10,
-            "advanced-circuit": 10,
-            "lubricant": 80
+          "iron-plate": 10
         },
         "output": {
-            "express-splitter": 1
+          "steel-plate": 1
         }
-    }, {
-        "id": "advanced-circuit",
+      }
+    },
+    {
+      "id": "long-handed-inserter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-gear-wheel": 1,
+        "iron-plate": 1,
+        "inserter": 1
+      },
+      "output": {
+        "long-handed-inserter": 1
+      }
+    },
+    {
+      "id": "fast-inserter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 2,
+        "iron-plate": 2,
+        "inserter": 1
+      },
+      "output": {
+        "fast-inserter": 1
+      }
+    },
+    {
+      "id": "filter-inserter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "fast-inserter": 1,
+        "electronic-circuit": 4
+      },
+      "output": {
+        "filter-inserter": 1
+      }
+    },
+    {
+      "id": "stack-inserter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-gear-wheel": 15,
+        "electronic-circuit": 15,
+        "advanced-circuit": 1,
+        "fast-inserter": 1
+      },
+      "output": {
+        "stack-inserter": 1
+      }
+    },
+    {
+      "id": "stack-filter-inserter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "stack-inserter": 1,
+        "electronic-circuit": 5
+      },
+      "output": {
+        "stack-filter-inserter": 1
+      }
+    },
+    {
+      "id": "speed-module",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 15,
+      "input": {
+        "advanced-circuit": 5,
+        "electronic-circuit": 5
+      },
+      "output": {
+        "speed-module": 1
+      }
+    },
+    {
+      "id": "speed-module-2",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 30,
+      "input": {
+        "speed-module": 4,
+        "advanced-circuit": 5,
+        "processing-unit": 5
+      },
+      "output": {
+        "speed-module-2": 1
+      }
+    },
+    {
+      "id": "speed-module-3",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 60,
+      "input": {
+        "speed-module-2": 5,
+        "advanced-circuit": 5,
+        "processing-unit": 5
+      },
+      "output": {
+        "speed-module-3": 1
+      }
+    },
+    {
+      "id": "productivity-module",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 15,
+      "input": {
+        "advanced-circuit": 5,
+        "electronic-circuit": 5
+      },
+      "output": {
+        "productivity-module": 1
+      }
+    },
+    {
+      "id": "productivity-module-2",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 30,
+      "input": {
+        "productivity-module": 4,
+        "advanced-circuit": 5,
+        "processing-unit": 5
+      },
+      "output": {
+        "productivity-module-2": 1
+      }
+    },
+    {
+      "id": "productivity-module-3",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 60,
+      "input": {
+        "productivity-module-2": 5,
+        "advanced-circuit": 5,
+        "processing-unit": 5
+      },
+      "output": {
+        "productivity-module-3": 1
+      }
+    },
+    {
+      "id": "effectivity-module",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 15,
+      "input": {
+        "advanced-circuit": 5,
+        "electronic-circuit": 5
+      },
+      "output": {
+        "effectivity-module": 1
+      }
+    },
+    {
+      "id": "effectivity-module-2",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 30,
+      "input": {
+        "effectivity-module": 4,
+        "advanced-circuit": 5,
+        "processing-unit": 5
+      },
+      "output": {
+        "effectivity-module-2": 1
+      }
+    },
+    {
+      "id": "effectivity-module-3",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 60,
+      "input": {
+        "effectivity-module-2": 5,
+        "advanced-circuit": 5,
+        "processing-unit": 5
+      },
+      "output": {
+        "effectivity-module-3": 1
+      }
+    },
+    {
+      "id": "player-port",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 10,
+        "iron-gear-wheel": 5,
+        "iron-plate": 1
+      },
+      "output": {
+        "player-port": 1
+      }
+    },
+    {
+      "id": "fast-transport-belt",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-gear-wheel": 5,
+        "transport-belt": 1
+      },
+      "output": {
+        "fast-transport-belt": 1
+      }
+    },
+    {
+      "id": "express-transport-belt",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 0.5,
+        "input": {
+          "iron-gear-wheel": 10,
+          "fast-transport-belt": 1,
+          "lubricant": 20
+        },
+        "output": {
+          "express-transport-belt": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "input": {
+          "iron-gear-wheel": 20,
+          "fast-transport-belt": 1,
+          "lubricant": 20
+        },
+        "output": {
+          "express-transport-belt": 1
+        }
+      }
+    },
+    {
+      "id": "solar-panel",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "steel-plate": 5,
+        "electronic-circuit": 15,
+        "copper-plate": 5
+      },
+      "output": {
+        "solar-panel": 1
+      }
+    },
+    {
+      "id": "assembling-machine-2",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 0.5,
+        "input": {
+          "iron-plate": 9,
+          "electronic-circuit": 3,
+          "iron-gear-wheel": 5,
+          "assembling-machine-1": 1
+        },
+        "output": {
+          "assembling-machine-2": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "input": {
+          "iron-plate": 20,
+          "electronic-circuit": 5,
+          "iron-gear-wheel": 10,
+          "assembling-machine-1": 1
+        },
+        "output": {
+          "assembling-machine-2": 1
+        }
+      }
+    },
+    {
+      "id": "assembling-machine-3",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "speed-module": 4,
+        "assembling-machine-2": 2
+      },
+      "output": {
+        "assembling-machine-3": 1
+      }
+    },
+    {
+      "id": "car",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "engine-unit": 8,
+        "iron-plate": 20,
+        "steel-plate": 5
+      },
+      "output": {
+        "car": 1
+      }
+    },
+    {
+      "id": "tank",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
+        "time": 0.5,
+        "input": {
+          "engine-unit": 32,
+          "steel-plate": 50,
+          "iron-gear-wheel": 15,
+          "advanced-circuit": 10
+        },
+        "output": {
+          "tank": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "input": {
+          "engine-unit": 64,
+          "steel-plate": 100,
+          "iron-gear-wheel": 30,
+          "advanced-circuit": 20
+        },
+        "output": {
+          "tank": 1
+        }
+      }
+    },
+    {
+      "id": "rail",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "stone": 1,
+        "iron-stick": 1,
+        "steel-plate": 1
+      },
+      "output": {
+        "rail": 2
+      }
+    },
+    {
+      "id": "locomotive",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "engine-unit": 20,
+        "electronic-circuit": 10,
+        "steel-plate": 30
+      },
+      "output": {
+        "locomotive": 1
+      }
+    },
+    {
+      "id": "cargo-wagon",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-gear-wheel": 10,
+        "iron-plate": 20,
+        "steel-plate": 20
+      },
+      "output": {
+        "cargo-wagon": 1
+      }
+    },
+    {
+      "id": "fluid-wagon",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 1.5,
+      "input": {
+        "iron-gear-wheel": 10,
+        "steel-plate": 16,
+        "pipe": 8,
+        "storage-tank": 3
+      },
+      "output": {
+        "fluid-wagon": 1
+      }
+    },
+    {
+      "id": "train-stop",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 5,
+        "iron-plate": 10,
+        "steel-plate": 3
+      },
+      "output": {
+        "train-stop": 1
+      }
+    },
+    {
+      "id": "rail-signal",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 1,
+        "iron-plate": 5
+      },
+      "output": {
+        "rail-signal": 1
+      }
+    },
+    {
+      "id": "rail-chain-signal",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 1,
+        "iron-plate": 5
+      },
+      "output": {
+        "rail-chain-signal": 1
+      }
+    },
+    {
+      "id": "heavy-armor",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 8,
+      "input": {
+        "copper-plate": 100,
+        "steel-plate": 50
+      },
+      "output": {
+        "heavy-armor": 1
+      }
+    },
+    {
+      "id": "modular-armor",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 15,
+      "input": {
+        "advanced-circuit": 30,
+        "steel-plate": 50
+      },
+      "output": {
+        "modular-armor": 1
+      }
+    },
+    {
+      "id": "power-armor",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 20,
+      "input": {
+        "processing-unit": 40,
+        "electric-engine-unit": 20,
+        "steel-plate": 40
+      },
+      "output": {
+        "power-armor": 1
+      }
+    },
+    {
+      "id": "power-armor-mk2",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 25,
+      "input": {
+        "effectivity-module-3": 5,
+        "speed-module-3": 5,
+        "processing-unit": 40,
+        "steel-plate": 40
+      },
+      "output": {
+        "power-armor-mk2": 1
+      }
+    },
+    {
+      "id": "iron-chest",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-plate": 8
+      },
+      "output": {
+        "iron-chest": 1
+      }
+    },
+    {
+      "id": "steel-chest",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-plate": 8
+      },
+      "output": {
+        "steel-chest": 1
+      }
+    },
+    {
+      "id": "stone-wall",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "stone-brick": 5
+      },
+      "output": {
+        "stone-wall": 1
+      }
+    },
+    {
+      "id": "gate",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "stone-wall": 1,
+        "steel-plate": 2,
+        "electronic-circuit": 2
+      },
+      "output": {
+        "gate": 1
+      }
+    },
+    {
+      "id": "flamethrower",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "steel-plate": 5,
+        "iron-gear-wheel": 10
+      },
+      "output": {
+        "flamethrower": 1
+      }
+    },
+    {
+      "id": "land-mine",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 5,
+      "input": {
+        "steel-plate": 1,
+        "explosives": 2
+      },
+      "output": {
+        "land-mine": 4
+      }
+    },
+    {
+      "id": "rocket-launcher",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "iron-plate": 5,
+        "iron-gear-wheel": 5,
+        "electronic-circuit": 5
+      },
+      "output": {
+        "rocket-launcher": 1
+      }
+    },
+    {
+      "id": "shotgun",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "iron-plate": 15,
+        "iron-gear-wheel": 5,
+        "copper-plate": 10,
+        "wood": 5
+      },
+      "output": {
+        "shotgun": 1
+      }
+    },
+    {
+      "id": "combat-shotgun",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "steel-plate": 15,
+        "iron-gear-wheel": 5,
+        "copper-plate": 10,
+        "wood": 10
+      },
+      "output": {
+        "combat-shotgun": 1
+      }
+    },
+    {
+      "id": "railgun",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 8,
+      "input": {
+        "steel-plate": 15,
+        "copper-plate": 15,
+        "electronic-circuit": 10,
+        "advanced-circuit": 5
+      },
+      "output": {
+        "railgun": 1
+      }
+    },
+    {
+      "id": "science-pack-1",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 5,
+      "input": {
+        "copper-plate": 1,
+        "iron-gear-wheel": 1
+      },
+      "output": {
+        "science-pack-1": 1
+      }
+    },
+    {
+      "id": "science-pack-2",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 6,
+      "input": {
+        "inserter": 1,
+        "transport-belt": 1
+      },
+      "output": {
+        "science-pack-2": 1
+      }
+    },
+    {
+      "id": "science-pack-3",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 12,
+      "input": {
+        "advanced-circuit": 1,
+        "engine-unit": 1,
+        "electric-mining-drill": 1
+      },
+      "output": {
+        "science-pack-3": 1
+      }
+    },
+    {
+      "id": "military-science-pack",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 10,
+      "input": {
+        "piercing-rounds-magazine": 1,
+        "grenade": 1,
+        "gun-turret": 1
+      },
+      "output": {
+        "military-science-pack": 2
+      }
+    },
+    {
+      "id": "production-science-pack",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 14,
+      "input": {
+        "electric-engine-unit": 1,
+        "assembling-machine-1": 1,
+        "electric-furnace": 1
+      },
+      "output": {
+        "production-science-pack": 2
+      }
+    },
+    {
+      "id": "high-tech-science-pack",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 14,
+      "input": {
+        "battery": 1,
+        "processing-unit": 3,
+        "speed-module": 1,
+        "copper-cable": 30
+      },
+      "output": {
+        "high-tech-science-pack": 2
+      }
+    },
+    {
+      "id": "lab",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "electronic-circuit": 10,
+        "iron-gear-wheel": 10,
+        "transport-belt": 4
+      },
+      "output": {
+        "lab": 1
+      }
+    },
+    {
+      "id": "red-wire",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 1,
+        "copper-cable": 1
+      },
+      "output": {
+        "red-wire": 1
+      }
+    },
+    {
+      "id": "green-wire",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "electronic-circuit": 1,
+        "copper-cable": 1
+      },
+      "output": {
+        "green-wire": 1
+      }
+    },
+    {
+      "id": "underground-belt",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 1,
+      "input": {
+        "iron-plate": 10,
+        "transport-belt": 5
+      },
+      "output": {
+        "underground-belt": 2
+      }
+    },
+    {
+      "id": "fast-underground-belt",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-gear-wheel": 40,
+        "underground-belt": 2
+      },
+      "output": {
+        "fast-underground-belt": 2
+      }
+    },
+    {
+      "id": "express-underground-belt",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-gear-wheel": 80,
+        "fast-underground-belt": 2,
+        "lubricant": 40
+      },
+      "output": {
+        "express-underground-belt": 2
+      }
+    },
+    {
+      "id": "loader",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 1,
+      "input": {
+        "inserter": 5,
+        "electronic-circuit": 5,
+        "iron-gear-wheel": 5,
+        "iron-plate": 5,
+        "transport-belt": 5
+      },
+      "output": {
+        "loader": 1
+      }
+    },
+    {
+      "id": "fast-loader",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "fast-transport-belt": 5,
+        "loader": 1
+      },
+      "output": {
+        "fast-loader": 1
+      }
+    },
+    {
+      "id": "express-loader",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "express-transport-belt": 5,
+        "fast-loader": 1
+      },
+      "output": {
+        "express-loader": 1
+      }
+    },
+    {
+      "id": "splitter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 1,
+      "input": {
+        "electronic-circuit": 5,
+        "iron-plate": 5,
+        "transport-belt": 4
+      },
+      "output": {
+        "splitter": 1
+      }
+    },
+    {
+      "id": "fast-splitter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 2,
+      "input": {
+        "splitter": 1,
+        "iron-gear-wheel": 10,
+        "electronic-circuit": 10
+      },
+      "output": {
+        "fast-splitter": 1
+      }
+    },
+    {
+      "id": "express-splitter",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2"
+      ],
+      "accept_productivity": false,
+      "time": 2,
+      "input": {
+        "fast-splitter": 1,
+        "iron-gear-wheel": 10,
+        "advanced-circuit": 10,
+        "lubricant": 80
+      },
+      "output": {
+        "express-splitter": 1
+      }
+    },
+    {
+      "id": "advanced-circuit",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "normal": {
         "time": 6,
-        "accept_productivity": true,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "electronic-circuit": 2,
-            "plastic-bar": 2,
-            "copper-cable": 4
+          "electronic-circuit": 2,
+          "plastic-bar": 2,
+          "copper-cable": 4
         },
         "output": {
-            "advanced-circuit": 1
+          "advanced-circuit": 1
         }
-    }, {
-        "id": "processing-unit",
+      },
+      "expensive": {
+        "time": 6,
+        "input": {
+          "electronic-circuit": 2,
+          "plastic-bar": 4,
+          "copper-cable": 8
+        },
+        "output": {
+          "advanced-circuit": 1
+        }
+      }
+    },
+    {
+      "id": "processing-unit",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2"
+      ],
+      "accept_productivity": true,
+      "normal": {
         "time": 10,
-        "accept_productivity": true,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "electronic-circuit": 20,
-            "advanced-circuit": 2,
-            "sulfuric-acid": 5
+          "electronic-circuit": 20,
+          "advanced-circuit": 2,
+          "sulfuric-acid": 5
         },
         "output": {
-            "processing-unit": 1
+          "processing-unit": 1
         }
-    }, {
-        "id": "logistic-robot",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "flying-robot-frame": 1,
-            "advanced-circuit": 2
-        },
-        "output": {
-            "logistic-robot": 1
-        }
-    }, {
-        "id": "construction-robot",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "flying-robot-frame": 1,
-            "electronic-circuit": 2
-        },
-        "output": {
-            "construction-robot": 1
-        }
-    }, {
-        "id": "logistic-chest-passive-provider",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-chest": 1,
-            "electronic-circuit": 3,
-            "advanced-circuit": 1
-        },
-        "output": {
-            "logistic-chest-passive-provider": 1
-        }
-    }, {
-        "id": "logistic-chest-active-provider",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-chest": 1,
-            "electronic-circuit": 3,
-            "advanced-circuit": 1
-        },
-        "output": {
-            "logistic-chest-active-provider": 1
-        }
-    }, {
-        "id": "logistic-chest-storage",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-chest": 1,
-            "electronic-circuit": 3,
-            "advanced-circuit": 1
-        },
-        "output": {
-            "logistic-chest-storage": 1
-        }
-    }, {
-        "id": "logistic-chest-requester",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-chest": 1,
-            "electronic-circuit": 3,
-            "advanced-circuit": 1
-        },
-        "output": {
-            "logistic-chest-requester": 1
-        }
-    }, {
-        "id": "rocket-silo",
-        "time": 30,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 1000,
-            "concrete": 1000,
-            "pipe": 100,
-            "processing-unit": 200,
-            "electric-engine-unit": 200
-        },
-        "output": {
-            "rocket-silo": 1
-        }
-    }, {
-        "id": "roboport",
+      },
+      "expensive": {
         "time": 10,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "steel-plate": 45,
-            "iron-gear-wheel": 45,
-            "advanced-circuit": 45
+          "electronic-circuit": 20,
+          "advanced-circuit": 2,
+          "sulfuric-acid": 10
         },
         "output": {
-            "roboport": 1
+          "processing-unit": 1
         }
-    }, {
-        "id": "steel-axe",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 5,
-            "iron-stick": 2
-        },
-        "output": {
-            "steel-axe": 1
-        }
-    }, {
-        "id": "big-electric-pole",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 5,
-            "copper-plate": 5
-        },
-        "output": {
-            "big-electric-pole": 1
-        }
-    }, {
-        "id": "substation",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 10,
-            "advanced-circuit": 5,
-            "copper-plate": 5
-        },
-        "output": {
-            "substation": 1
-        }
-    }, {
-        "id": "medium-electric-pole",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 2,
-            "copper-plate": 2
-        },
-        "output": {
-            "medium-electric-pole": 1
-        }
-    }, {
-        "id": "accumulator",
-        "time": 10,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "iron-plate": 2,
-            "battery": 5
-        },
-        "output": {
-            "accumulator": 1
-        }
-    }, {
-        "id": "steel-furnace",
-        "time": 3,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 6,
-            "stone-brick": 10
-        },
-        "output": {
-            "steel-furnace": 1
-        }
-    }, {
-        "id": "electric-furnace",
+      }
+    },
+    {
+      "id": "logistic-robot",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "flying-robot-frame": 1,
+        "advanced-circuit": 2
+      },
+      "output": {
+        "logistic-robot": 1
+      }
+    },
+    {
+      "id": "construction-robot",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "flying-robot-frame": 1,
+        "electronic-circuit": 2
+      },
+      "output": {
+        "construction-robot": 1
+      }
+    },
+    {
+      "id": "logistic-chest-passive-provider",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-chest": 1,
+        "electronic-circuit": 3,
+        "advanced-circuit": 1
+      },
+      "output": {
+        "logistic-chest-passive-provider": 1
+      }
+    },
+    {
+      "id": "logistic-chest-active-provider",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-chest": 1,
+        "electronic-circuit": 3,
+        "advanced-circuit": 1
+      },
+      "output": {
+        "logistic-chest-active-provider": 1
+      }
+    },
+    {
+      "id": "logistic-chest-storage",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-chest": 1,
+        "electronic-circuit": 3,
+        "advanced-circuit": 1
+      },
+      "output": {
+        "logistic-chest-storage": 1
+      }
+    },
+    {
+      "id": "logistic-chest-requester",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-chest": 1,
+        "electronic-circuit": 3,
+        "advanced-circuit": 1
+      },
+      "output": {
+        "logistic-chest-requester": 1
+      }
+    },
+    {
+      "id": "rocket-silo",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 30,
+      "input": {
+        "steel-plate": 1000,
+        "concrete": 1000,
+        "pipe": 100,
+        "processing-unit": 200,
+        "electric-engine-unit": 200
+      },
+      "output": {
+        "rocket-silo": 1
+      }
+    },
+    {
+      "id": "roboport",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "steel-plate": 45,
+        "iron-gear-wheel": 45,
+        "advanced-circuit": 45
+      },
+      "output": {
+        "roboport": 1
+      }
+    },
+    {
+      "id": "steel-axe",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-plate": 5,
+        "iron-stick": 2
+      },
+      "output": {
+        "steel-axe": 1
+      }
+    },
+    {
+      "id": "big-electric-pole",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-plate": 5,
+        "copper-plate": 5
+      },
+      "output": {
+        "big-electric-pole": 1
+      }
+    },
+    {
+      "id": "substation",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-plate": 10,
+        "advanced-circuit": 5,
+        "copper-plate": 5
+      },
+      "output": {
+        "substation": 1
+      }
+    },
+    {
+      "id": "medium-electric-pole",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-plate": 2,
+        "copper-plate": 2
+      },
+      "output": {
+        "medium-electric-pole": 1
+      }
+    },
+    {
+      "id": "accumulator",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "iron-plate": 2,
+        "battery": 5
+      },
+      "output": {
+        "accumulator": 1
+      }
+    },
+    {
+      "id": "steel-furnace",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "steel-plate": 6,
+        "stone-brick": 10
+      },
+      "output": {
+        "steel-furnace": 1
+      }
+    },
+    {
+      "id": "electric-furnace",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 5,
+      "input": {
+        "steel-plate": 10,
+        "advanced-circuit": 5,
+        "stone-brick": 10
+      },
+      "output": {
+        "electric-furnace": 1
+      }
+    },
+    {
+      "id": "beacon",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 15,
+      "input": {
+        "electronic-circuit": 20,
+        "advanced-circuit": 20,
+        "steel-plate": 10,
+        "copper-cable": 10
+      },
+      "output": {
+        "beacon": 1
+      }
+    },
+    {
+      "id": "pumpjack",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 5,
+      "input": {
+        "steel-plate": 5,
+        "iron-gear-wheel": 10,
+        "electronic-circuit": 5,
+        "pipe": 10
+      },
+      "output": {
+        "pumpjack": 1
+      }
+    },
+    {
+      "id": "oil-refinery",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "steel-plate": 15,
+        "iron-gear-wheel": 10,
+        "stone-brick": 10,
+        "electronic-circuit": 10,
+        "pipe": 10
+      },
+      "output": {
+        "oil-refinery": 1
+      }
+    },
+    {
+      "id": "engine-unit",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 10,
+      "input": {
+        "steel-plate": 1,
+        "iron-gear-wheel": 1,
+        "pipe": 2
+      },
+      "output": {
+        "engine-unit": 1
+      }
+    },
+    {
+      "id": "electric-engine-unit",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "engine-unit": 1,
+        "lubricant": 15,
+        "electronic-circuit": 2
+      },
+      "output": {
+        "electric-engine-unit": 1
+      }
+    },
+    {
+      "id": "flying-robot-frame",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": true,
+      "time": 20,
+      "input": {
+        "electric-engine-unit": 1,
+        "battery": 2,
+        "steel-plate": 1,
+        "electronic-circuit": 3
+      },
+      "output": {
+        "flying-robot-frame": 1
+      }
+    },
+    {
+      "id": "explosives",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": true,
+      "normal": {
         "time": 5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "steel-plate": 10,
-            "advanced-circuit": 5,
-            "stone-brick": 10
+          "sulfur": 1,
+          "coal": 1,
+          "water": 10
         },
         "output": {
-            "electric-furnace": 1
+          "explosives": 1
         }
-    }, {
-        "id": "beacon",
-        "time": 15,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "electronic-circuit": 20,
-            "advanced-circuit": 20,
-            "steel-plate": 10,
-            "copper-cable": 10
-        },
-        "output": {
-            "beacon": 1
-        }
-    }, {
-        "id": "pumpjack",
+      },
+      "expensive": {
         "time": 5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "steel-plate": 5,
-            "iron-gear-wheel": 10,
-            "electronic-circuit": 5,
-            "pipe": 10
+          "sulfur": 2,
+          "coal": 2,
+          "water": 10
         },
         "output": {
-            "pumpjack": 1
+          "explosives": 1
         }
-    }, {
-        "id": "oil-refinery",
-        "time": 10,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 15,
-            "iron-gear-wheel": 10,
-            "stone-brick": 10,
-            "electronic-circuit": 10,
-            "pipe": 10
-        },
-        "output": {
-            "oil-refinery": 1
-        }
-    }, {
-        "id": "engine-unit",
-        "time": 10,
-        "accept_productivity": true,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 1,
-            "iron-gear-wheel": 1,
-            "pipe": 2
-        },
-        "output": {
-            "engine-unit": 1
-        }
-    }, {
-        "id": "electric-engine-unit",
-        "time": 10,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "engine-unit": 1,
-            "lubricant": 15,
-            "electronic-circuit": 2
-        },
-        "output": {
-            "electric-engine-unit": 1
-        }
-    }, {
-        "id": "flying-robot-frame",
-        "time": 20,
-        "accept_productivity": true,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "electric-engine-unit": 1,
-            "battery": 2,
-            "steel-plate": 1,
-            "electronic-circuit": 3
-        },
-        "output": {
-            "flying-robot-frame": 1
-        }
-    }, {
-        "id": "explosives",
+      }
+    },
+    {
+      "id": "battery",
+      "building": [
+        "chemical-plant"
+      ],
+      "accept_productivity": true,
+      "normal": {
         "time": 5,
-        "accept_productivity": true,
-        "building": ["chemical-plant"],
         "input": {
-            "sulfur": 1,
-            "coal": 1,
-            "water": 10
+          "sulfuric-acid": 20,
+          "iron-plate": 1,
+          "copper-plate": 1
         },
         "output": {
-            "explosives": 1
+          "battery": 1
         }
-    }, {
-        "id": "battery",
+      },
+      "expensive": {
         "time": 5,
-        "accept_productivity": true,
-        "building": ["chemical-plant"],
         "input": {
-            "sulfuric-acid": 20,
-            "iron-plate": 1,
-            "copper-plate": 1
+          "sulfuric-acid": 40,
+          "iron-plate": 1,
+          "copper-plate": 1
         },
         "output": {
-            "battery": 1
+          "battery": 1
         }
-    }, {
-        "id": "storage-tank",
-        "time": 3,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "iron-plate": 20,
-            "steel-plate": 5
-        },
-        "output": {
-            "storage-tank": 1
-        }
-    }, {
-        "id": "pump",
-        "time": 2,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "engine-unit": 1,
-            "steel-plate": 1,
-            "pipe": 1
-        },
-        "output": {
-            "pump": 1
-        }
-    }, {
-        "id": "chemical-plant",
-        "time": 5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 5,
-            "iron-gear-wheel": 5,
-            "electronic-circuit": 5,
-            "pipe": 5
-        },
-        "output": {
-            "chemical-plant": 1
-        }
-    }, {
-        "id": "small-plane",
+      }
+    },
+    {
+      "id": "storage-tank",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "iron-plate": 20,
+        "steel-plate": 5
+      },
+      "output": {
+        "storage-tank": 1
+      }
+    },
+    {
+      "id": "pump",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 2,
+      "input": {
+        "engine-unit": 1,
+        "steel-plate": 1,
+        "pipe": 1
+      },
+      "output": {
+        "pump": 1
+      }
+    },
+    {
+      "id": "chemical-plant",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 5,
+      "input": {
+        "steel-plate": 5,
+        "iron-gear-wheel": 5,
+        "electronic-circuit": 5,
+        "pipe": 5
+      },
+      "output": {
+        "chemical-plant": 1
+      }
+    },
+    {
+      "id": "small-plane",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 30,
+      "input": {
+        "plastic-bar": 100,
+        "advanced-circuit": 200,
+        "electric-engine-unit": 20,
+        "battery": 100
+      },
+      "output": {
+        "small-plane": 1
+      }
+    },
+    {
+      "id": "arithmetic-combinator",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "copper-cable": 5,
+        "electronic-circuit": 5
+      },
+      "output": {
+        "arithmetic-combinator": 1
+      }
+    },
+    {
+      "id": "decider-combinator",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "copper-cable": 5,
+        "electronic-circuit": 5
+      },
+      "output": {
+        "decider-combinator": 1
+      }
+    },
+    {
+      "id": "constant-combinator",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "copper-cable": 5,
+        "electronic-circuit": 2
+      },
+      "output": {
+        "constant-combinator": 1
+      }
+    },
+    {
+      "id": "power-switch",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 2,
+      "input": {
+        "iron-plate": 5,
+        "copper-cable": 5,
+        "electronic-circuit": 2
+      },
+      "output": {
+        "power-switch": 1
+      }
+    },
+    {
+      "id": "programmable-speaker",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 2,
+      "input": {
+        "iron-plate": 5,
+        "copper-cable": 5,
+        "electronic-circuit": 4
+      },
+      "output": {
+        "programmable-speaker": 1
+      }
+    },
+    {
+      "id": "low-density-structure",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "normal": {
         "time": 30,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "plastic-bar": 100,
-            "advanced-circuit": 200,
-            "electric-engine-unit": 20,
-            "battery": 100
+          "steel-plate": 10,
+          "copper-plate": 5,
+          "plastic-bar": 5
         },
         "output": {
-            "small-plane": 1
+          "low-density-structure": 1
         }
-    }, {
-        "id": "arithmetic-combinator",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "copper-cable": 5,
-            "electronic-circuit": 5
-        },
-        "output": {
-            "arithmetic-combinator": 1
-        }
-    }, {
-        "id": "decider-combinator",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "copper-cable": 5,
-            "electronic-circuit": 5
-        },
-        "output": {
-            "decider-combinator": 1
-        }
-    }, {
-        "id": "constant-combinator",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "copper-cable": 5,
-            "electronic-circuit": 2
-        },
-        "output": {
-            "constant-combinator": 1
-        }
-    }, {
-        "id": "power-switch",
-        "time": 2,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "iron-plate": 5,
-            "copper-cable": 5,
-            "electronic-circuit": 2
-        },
-        "output": {
-            "power-switch": 1
-        }
-    }, {
-        "id": "programmable-speaker",
-        "time": 2,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "iron-plate": 5,
-            "copper-cable": 5,
-            "electronic-circuit": 4
-        },
-        "output": {
-            "programmable-speaker": 1
-        }
-    }, {
-        "id": "low-density-structure",
+      },
+      "expensive": {
         "time": 30,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
         "input": {
-            "steel-plate": 10,
-            "copper-plate": 5,
-            "plastic-bar": 5
+          "steel-plate": 10,
+          "copper-plate": 10,
+          "plastic-bar": 10
         },
         "output": {
-            "low-density-structure": 1
+          "low-density-structure": 1
         }
-    }, {
-        "id": "rocket-fuel",
-        "time": 30,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "solid-fuel": 10
-        },
-        "output": {
-            "rocket-fuel": 1
-        }
-    }, {
-        "id": "rocket-control-unit",
-        "time": 30,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "processing-unit": 1,
-            "speed-module": 1
-        },
-        "output": {
-            "rocket-control-unit": 1
-        }
-    }, {
-        "id": "rocket-part",
-        "time": 3,
-        "accept_productivity": false,
-        "building": ["rocket-silo"],
-        "input": {
-            "low-density-structure": 10,
-            "rocket-fuel": 10,
-            "rocket-control-unit": 10
-        },
-        "output": {
-            "rocket-part": 1
-        }
-    }, {
-        "id": "satellite",
-        "time": 3,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "low-density-structure": 100,
-            "solar-panel": 100,
-            "accumulator": 100,
-            "radar": 5,
-            "processing-unit": 100,
-            "rocket-fuel": 50
-        },
-        "output": {
-            "satellite": 1
-        }
-    }, {
-        "id": "concrete",
-        "time": 10,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "stone-brick": 5,
-            "iron-ore": 1,
-            "water": 100
-        },
-        "output": {
-            "concrete": 10
-        }
-    }, {
-        "id": "hazard-concrete",
-        "time": 0.25,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "concrete": 10
-        },
-        "output": {
-            "hazard-concrete": 10
-        }
-    }, {
-        "id": "landfill",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "stone": 20
-        },
-        "output": {
-            "landfill": 1
-        }
-    }, {
-        "id": "electric-energy-interface",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "iron-plate": 2,
-            "electronic-circuit": 5
-        },
-        "output": {
-            "electric-energy-interface": 1
-        }
-    }, {
-        "id": "nuclear-reactor",
-        "time": 4,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "concrete": 500,
-            "steel-plate": 500,
-            "advanced-circuit": 500,
-            "copper-plate": 500
-        },
-        "output": {
-            "nuclear-reactor": 1
-        }
-    }, {
-        "id": "centrifuge",
-        "time": 4,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "concrete": 100,
-            "steel-plate": 50,
-            "advanced-circuit": 100,
-            "iron-gear-wheel": 100
-        },
-        "output": {
-            "centrifuge": 1
-        }
-    }, {
-        "id": "uranium-processing",
-        "time": 10,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "uranium-ore": 10
-        },
-        "output": {
-            "uranium-235": 1,
-            "uranium-238": 1
-        }
-    }, {
-        "id": "kovarex-enrichment-process",
-        "time": 50,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "uranium-235": 40,
-            "uranium-238": 5
-        },
-        "output": {
-            "uranium-235": 41,
-            "uranium-238": 2
-        }
-    }, {
-        "id": "nuclear-fuel-reprocessing",
-        "time": 50,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "used-up-uranium-fuel-cell": 5
-        },
-        "output": {
-            "uranium-238": 3
-        }
-    }, {
-        "id": "uranium-fuel-cell",
-        "time": 10,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "iron-plate": 10,
-            "uranium-235": 1,
-            "uranium-238": 19
-        },
-        "output": {
-            "uranium-fuel-cell": 10
-        }
-    }, {
-        "id": "heat-exchanger",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 10,
-            "copper-plate": 100,
-            "pipe": 10
-        },
-        "output": {
-            "heat-exchanger": 1
-        }
-    }, {
-        "id": "heat-pipe",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 10,
-            "copper-plate": 20
-        },
-        "output": {
-            "heat-pipe": 1
-        }
-    }, {
-        "id": "steam-turbine",
-        "time": 0.5,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "iron-gear-wheel": 50,
-            "copper-plate": 50,
-            "pipe": 20
-        },
-        "output": {
-            "steam-turbine": 1
-        }
-    }, {
-        "id": "laser-turret",
-        "time": 20,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 20,
-            "electronic-circuit": 20,
-            "battery": 12
-        },
-        "output": {
-            "laser-turret": 1
-        }
-    }, {
-        "id": "flamethrower-turret",
-        "time": 20,
-        "accept_productivity": false,
-        "building": ["assembling-machine-3", "assembling-machine-2", "assembling-machine-1"],
-        "input": {
-            "steel-plate": 30,
-            "iron-gear-wheel": 15,
-            "pipe": 10,
-            "engine-unit": 5
-        },
-        "output": {
-            "flamethrower-turret": 1
-        }
-    }]
+      }
+    },
+    {
+      "id": "rocket-fuel",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 30,
+      "input": {
+        "solid-fuel": 10
+      },
+      "output": {
+        "rocket-fuel": 1
+      }
+    },
+    {
+      "id": "rocket-control-unit",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 30,
+      "input": {
+        "processing-unit": 1,
+        "speed-module": 1
+      },
+      "output": {
+        "rocket-control-unit": 1
+      }
+    },
+    {
+      "id": "rocket-part",
+      "building": [
+        "rocket-silo"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "low-density-structure": 10,
+        "rocket-fuel": 10,
+        "rocket-control-unit": 10
+      },
+      "output": {
+        "rocket-part": 1
+      }
+    },
+    {
+      "id": "satellite",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 3,
+      "input": {
+        "low-density-structure": 100,
+        "solar-panel": 100,
+        "accumulator": 100,
+        "radar": 5,
+        "processing-unit": 100,
+        "rocket-fuel": 50
+      },
+      "output": {
+        "satellite": 1
+      }
+    },
+    {
+      "id": "concrete",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "stone-brick": 5,
+        "iron-ore": 1,
+        "water": 100
+      },
+      "output": {
+        "concrete": 10
+      }
+    },
+    {
+      "id": "hazard-concrete",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.25,
+      "input": {
+        "concrete": 10
+      },
+      "output": {
+        "hazard-concrete": 10
+      }
+    },
+    {
+      "id": "landfill",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "stone": 20
+      },
+      "output": {
+        "landfill": 1
+      }
+    },
+    {
+      "id": "electric-energy-interface",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-plate": 2,
+        "electronic-circuit": 5
+      },
+      "output": {
+        "electric-energy-interface": 1
+      }
+    },
+    {
+      "id": "nuclear-reactor",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 4,
+      "input": {
+        "concrete": 500,
+        "steel-plate": 500,
+        "advanced-circuit": 500,
+        "copper-plate": 500
+      },
+      "output": {
+        "nuclear-reactor": 1
+      }
+    },
+    {
+      "id": "centrifuge",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 4,
+      "input": {
+        "concrete": 100,
+        "steel-plate": 50,
+        "advanced-circuit": 100,
+        "iron-gear-wheel": 100
+      },
+      "output": {
+        "centrifuge": 1
+      }
+    },
+    {
+      "id": "uranium-processing",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "uranium-ore": 10
+      },
+      "output": {
+        "uranium-235": 1,
+        "uranium-238": 1
+      }
+    },
+    {
+      "id": "kovarex-enrichment-process",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 50,
+      "input": {
+        "uranium-235": 40,
+        "uranium-238": 5
+      },
+      "output": {
+        "uranium-235": 41,
+        "uranium-238": 2
+      }
+    },
+    {
+      "id": "nuclear-fuel-reprocessing",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 50,
+      "input": {
+        "used-up-uranium-fuel-cell": 5
+      },
+      "output": {
+        "uranium-238": 3
+      }
+    },
+    {
+      "id": "uranium-fuel-cell",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 10,
+      "input": {
+        "iron-plate": 10,
+        "uranium-235": 1,
+        "uranium-238": 19
+      },
+      "output": {
+        "uranium-fuel-cell": 10
+      }
+    },
+    {
+      "id": "heat-exchanger",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-plate": 10,
+        "copper-plate": 100,
+        "pipe": 10
+      },
+      "output": {
+        "heat-exchanger": 1
+      }
+    },
+    {
+      "id": "heat-pipe",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "steel-plate": 10,
+        "copper-plate": 20
+      },
+      "output": {
+        "heat-pipe": 1
+      }
+    },
+    {
+      "id": "steam-turbine",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 0.5,
+      "input": {
+        "iron-gear-wheel": 50,
+        "copper-plate": 50,
+        "pipe": 20
+      },
+      "output": {
+        "steam-turbine": 1
+      }
+    },
+    {
+      "id": "laser-turret",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 20,
+      "input": {
+        "steel-plate": 20,
+        "electronic-circuit": 20,
+        "battery": 12
+      },
+      "output": {
+        "laser-turret": 1
+      }
+    },
+    {
+      "id": "flamethrower-turret",
+      "building": [
+        "assembling-machine-3",
+        "assembling-machine-2",
+        "assembling-machine-1"
+      ],
+      "accept_productivity": false,
+      "time": 20,
+      "input": {
+        "steel-plate": 30,
+        "iron-gear-wheel": 15,
+        "pipe": 10,
+        "engine-unit": 5
+      },
+      "output": {
+        "flamethrower-turret": 1
+      }
+    }
+  ]
 }

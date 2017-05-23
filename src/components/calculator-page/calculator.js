@@ -1,4 +1,4 @@
-define(['knockout', 'text!./calculator.html', 'data', /*pre-load*/ 'components/production/production-row'], function(ko, template, dataLoader) {
+define(['knockout', 'text!./calculator.html', 'data', 'app/recipes', /*pre-load*/ 'components/production/production-row'], function(ko, template, dataLoader, $r) {
 
     function CalculatorViewModel(route) {
         var $self = this;
@@ -10,6 +10,7 @@ define(['knockout', 'text!./calculator.html', 'data', /*pre-load*/ 'components/p
         $self.cycleLength = ko.observable(1);
         $self.numberOfBuildings = ko.observable(1);
 
+        $self.expensiveRecipes = ko.observable(false);
         $self.selectedRecipe = ko.observable();
         $self.selectedBuilding = ko.observable();
         $self.selectedModules = dataLoader.modules;
@@ -52,7 +53,7 @@ define(['knockout', 'text!./calculator.html', 'data', /*pre-load*/ 'components/p
         var $self = this;
         return recipeViewModel => {
 
-            var inputs = _loadInputs(1, recipeViewModel.recipe);
+            var inputs = _loadInputs(1, recipeViewModel.recipe, $self.expensiveRecipes());
             var children = recipeViewModel.children.peek();
 
             for (var i in inputs) {
@@ -74,10 +75,10 @@ define(['knockout', 'text!./calculator.html', 'data', /*pre-load*/ 'components/p
         this.isOpen(!this.isOpen());
     }
 
-    function _loadInputs(length, recipe) {
+    function _loadInputs(length, recipe, expensiveRecipes) {
         var result = [];
         if (length > 0) {
-            for (var i = 0, keys = Object.keys(recipe.input); i < keys.length; i++) {
+            for (var i = 0, keys = Object.keys($r.GetRecipeInput(recipe, expensiveRecipes)); i < keys.length; i++) {
                 var input = keys[i];
 
                 var recipeByOutput = dataLoader.recipes.getByOutput(input);

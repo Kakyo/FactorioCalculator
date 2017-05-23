@@ -8,7 +8,7 @@ define(['knockout', 'jquery', 'app/LoadManager'], function(ko, $, Manager) {
         manager.mapOutput = {};
         for (var r = 0, lenR = recipes.length; r < lenR; r++) {
 
-            var recipeOutput = Object.keys(recipes[r].output);
+            var recipeOutput = Object.keys(!!recipes[r].output ? recipes[r].output : recipes[r].normal.output);
             for (var o = 0, lenO = recipeOutput.length; o < lenO; o++) {
                 var output = recipeOutput[o];
                 if (!manager.mapOutput[output]) {

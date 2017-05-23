@@ -1,4 +1,4 @@
-define(['knockout', 'text!./production-row.html', 'data', 'app/formulae', 'i18n'], function(ko, template, $d, $f, $i) {
+define(['knockout', 'text!./production-row.html', 'data', 'app/formulae', 'i18n', 'app/recipes'], function(ko, template, $d, $f, $i, $r) {
 
     function ProductionRowViewModel(params) {
         var $self = this;
@@ -13,6 +13,7 @@ define(['knockout', 'text!./production-row.html', 'data', 'app/formulae', 'i18n'
         };
         $self.module = params.module;
         $self.children = params.children;
+        $self.expensiveRecipes = params.expensiveRecipes;
         $self.inputProduction = {};
         $self.header = $i(params.recipe.id)||params.recipe.id;
         $self.supply = ko.observable();
@@ -30,7 +31,7 @@ define(['knockout', 'text!./production-row.html', 'data', 'app/formulae', 'i18n'
                 return params.visible() && params.visibleParent()
             }),
             visibleParent: params.visibleParent,
-            hasInputs: ko.computed(() => Object.keys($self.recipe.input || {}).length > 0),
+            hasInputs: ko.computed(() => Object.keys($r.GetRecipeInput($self.recipe, $self.expensiveRecipes()) || {}).length > 0),
             hasSupply: ko.computed(() => Object.keys($self.supply() || {}).length > 0),
             hasChildren: ko.computed(() => $self.children().length > 0),
 
@@ -142,7 +143,7 @@ define(['knockout', 'text!./production-row.html', 'data', 'app/formulae', 'i18n'
             var cycleLength = $self.options.cycleLength();
             var numberOfBuildings = $self.options.numberOfBuildings();
 
-            var inputs = $f.GetInputPerSecond($self.recipe, $self.building.selected, $f.GetSpeedMultiplier($self.module));
+            var inputs = $f.GetInputPerSecond($self.recipe, $self.building.selected, $f.GetSpeedMultiplier($self.module), $self.expensiveRecipes);
             var length = Object.keys(inputs).length;
             var size = 'col-lg-' + Math.round(12 / length) + ' col-sm-' + Math.round(24 / length);
 
@@ -165,7 +166,7 @@ define(['knockout', 'text!./production-row.html', 'data', 'app/formulae', 'i18n'
             var cycleLength = $self.options.cycleLength();
             var numberOfBuildings = $self.options.numberOfBuildings();
 
-            var inputs = $f.GetOutputPerSecond($self.recipe, $self.building.selected, $f.GetSpeedMultiplier($self.module), $f.GetProductionMultiplier($self.module));
+            var inputs = $f.GetOutputPerSecond($self.recipe, $self.building.selected, $f.GetSpeedMultiplier($self.module), $f.GetProductionMultiplier($self.module), $self.expensiveRecipes);
             var size = 'col-sm-' + Math.round(12 / Object.keys(inputs).length);
             for (var k in inputs) {
                 result.push({

@@ -10,9 +10,16 @@
             </button>
         </div>
 
-        <div class="col-sm-11">
+        <div class="col-sm-8">
             <label class="form-control-label">Cycle length ( in seconds )</label>
             <input data-bind="value:cycleLength" class="form-control" type="number" min="1" />
+        </div>
+        <div class="col-sm-3">
+        <div class="checkbox">
+            <label>
+              <input data-bind="checked:expensiveRecipes" type="checkbox"> Marathon recipes
+            </label>
+        </div>
         </div>
     </div>
 
@@ -25,7 +32,7 @@
         </section>
         
         <selection-recipe class="row" params="{ 
-            selectedRecipe: selectedRecipe, selectedModules: selectedModules }">
+            selectedRecipe: selectedRecipe, selectedModules: selectedModules, expensiveRecipes: expensiveRecipes }">
         </selection-recipe>
         <selection-building class="row" params="{ 
             numberOfBuildings: numberOfBuildings, selectedBuilding: selectedBuilding, selectedRecipe: selectedRecipe, selectedModules: selectedModules }">
@@ -34,7 +41,7 @@
             <statistic-view class="col-lg-6" params="{
                 selectedBuilding: selectedBuilding, selectedRecipe:selectedRecipe, selectedModules:selectedModules,
                 calculateCycle:calculateCycle, cycleLength:cycleLength, 
-                calculateBuildings:calculateBuildings, numberOfBuildings:numberOfBuildings }">
+                calculateBuildings:calculateBuildings, numberOfBuildings:numberOfBuildings, expensiveRecipes: expensiveRecipes }">
             </statistic-view>
             <selection-module class="col-lg-6" params="{ selectedModules: selectedModules, selectedRecipe: selectedRecipe }"></selection-module>
         </section>
@@ -44,5 +51,5 @@
 <production-table class="container-fluid" data-bind="visible:recipeTree().length>0" params="{
     recipeTree:recipeTree, numberOfBuildings:numberOfBuildings, 
     calculateCycle:calculateCycle, cycleLength:cycleLength, calculateBuildings:calculateBuildings,
-    removeRecipeClick:removeRecipe(), includeChildrenClick: includeChildren()}">
+    removeRecipeClick:removeRecipe(), includeChildrenClick: includeChildren(), expensiveRecipes: expensiveRecipes}">
 </production-table>

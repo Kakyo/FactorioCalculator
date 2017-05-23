@@ -1,4 +1,4 @@
-define([], function() {
+define(['app/recipes'], function($r) {
 
     function getValue(load, property) {
         //  using bit OR (value | 0) to parse to number is causing the decimal to be lost
@@ -93,28 +93,31 @@ define([], function() {
         return calculateTotal(selectedBuilding(), multiplier, 'speed');
     }
 
-    function validateRecipe(selectedRecipe, selectedBuilding, loop, action) {
+    function validateRecipe(selectedRecipe, selectedBuilding, loop, expensiveRecipes, action) {
         var recipe = typeof(selectedRecipe) === "function" ? selectedRecipe() : selectedRecipe;
         var building = typeof(selectedBuilding) === "function" ? selectedBuilding() : selectedBuilding;
+        var expensiveRecipes = typeof(expensiveRecipes) === "function" ? expensiveRecipes() : expensiveRecipes;
         var result = {};
+        var items = loop === "input" ? $r.GetRecipeInput(recipe, expensiveRecipes) : $r.GetRecipeOutput(recipe, expensiveRecipes);
         if (recipe) {
-            var time = recipe.time;
-            for (var i in recipe[loop]) {
-                result[i] = action(building, recipe[loop][i], time);
+            //TODO time not based on marathon
+            var time = $r.GetRecipeTime(recipe, expensiveRecipes);
+            for (var i in items) {
+                result[i] = action(building, items[i], time);
             }
         }
         return result;
     }
 
-    function _getPerSecondInputRecipes(selectedRecipe, selectedBuilding, modifiedSpeed) {
-        return validateRecipe(selectedRecipe, selectedBuilding, 'input', function(building, value, time) {
+    function _getPerSecondInputRecipes(selectedRecipe, selectedBuilding, modifiedSpeed, expensiveRecipes) {
+        return validateRecipe(selectedRecipe, selectedBuilding, 'input', expensiveRecipes, function(building, value, time) {
             var speed = (building ? building.speed : 1) * (1 + modifiedSpeed);
             return value / (time / speed);
         });
     }
 
-    function _getPerSecondOutputRecipes(selectedRecipe, selectedBuilding, modifiedSpeed, modifiedProduction) {
-        return validateRecipe(selectedRecipe, selectedBuilding, 'output', function(building, value, time) {
+    function _getPerSecondOutputRecipes(selectedRecipe, selectedBuilding, modifiedSpeed, modifiedProduction, expensiveRecipes) {
+        return validateRecipe(selectedRecipe, selectedBuilding, 'output', expensiveRecipes, function(building, value, time) {
             var speed = (building ? building.speed : 1) * (1 + modifiedSpeed);
             var production = (building ? building.production : 1) * (1 + modifiedProduction)
             var isMiningDrill = (building ? building.canMine : 0);

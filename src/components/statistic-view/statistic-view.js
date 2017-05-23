@@ -17,6 +17,7 @@ define(['knockout', 'text!./statistic-view.html', 'app/formulae'], function(ko, 
 
         $self.calculateCycle = params.calculateCycle;
         $self.calculateBuildings = params.calculateBuildings;
+        $self.expensiveRecipes = params.expensiveRecipes;
         $self.buildingProperties = ko.computed($self.computeBuilding(params));
         $self.inputProperties = ko.computed($self.computeInput(params));
         $self.outputProperties = ko.computed($self.computeOutput(params));
@@ -74,7 +75,7 @@ define(['knockout', 'text!./statistic-view.html', 'app/formulae'], function(ko, 
             var cycleLength = params.calculateCycle() ? params.cycleLength() : 1;
             var numberOfBuildings = params.calculateBuildings() ? params.numberOfBuildings() : 1;
 
-            var inputs = $f.GetInputPerSecond(params.selectedRecipe, params.selectedBuilding, $f.GetSpeedMultiplier(params.selectedModules));
+            var inputs = $f.GetInputPerSecond(params.selectedRecipe, params.selectedBuilding, $f.GetSpeedMultiplier(params.selectedModules), params.expensiveRecipes);
             for (var k in inputs) {
                 result.push({
                     name: k,
@@ -91,7 +92,7 @@ define(['knockout', 'text!./statistic-view.html', 'app/formulae'], function(ko, 
             var cycleLength = params.calculateCycle() ? params.cycleLength() : 1;
             var numberOfBuildings = params.calculateBuildings() ? params.numberOfBuildings() : 1;
 
-            var inputs = $f.GetOutputPerSecond(params.selectedRecipe, params.selectedBuilding, $f.GetSpeedMultiplier(params.selectedModules), $f.GetProductionMultiplier(params.selectedModules));
+            var inputs = $f.GetOutputPerSecond(params.selectedRecipe, params.selectedBuilding, $f.GetSpeedMultiplier(params.selectedModules), $f.GetProductionMultiplier(params.selectedModules), params.expensiveRecipes);
             for (var k in inputs) {
                 result.push({
                     name: k,

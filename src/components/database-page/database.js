@@ -40,13 +40,13 @@ define(['knockout', 'text!./database.html', 'jquery',
     }
 
     var building_map = {
+        'crafting-with-fluid': ['assembling-machine-3', 'assembling-machine-2'],
+        'rocket-building': ['rocket-silo'],
         'crafting': ['assembling-machine-3', 'assembling-machine-2', 'assembling-machine-1'],
         'chemistry': ['chemical-plant'],
         'oil-processing': ['oil-refinery'],
-        'smelting': ['electric-furnace', 'steel-furnace', 'stone-furnace'],
-        'rocket-building': ['rocket-silo']
-    };
-
+        'smelting': ['electric-furnace', 'steel-furnace', 'stone-furnace']
+    }
     var intermediate_products = {
         'wood': 1,
         'iron-plate': 1,
@@ -83,22 +83,37 @@ define(['knockout', 'text!./database.html', 'jquery',
         //debugger;
         for (var i = 0, len = data.length; i < len; i++) {
             var dataitem = data[i];
-            var dificultInfo = dataitem.normal || dataitem;
-
-            result.push({
-                id: dataitem.name,
-                time: dificultInfo.energy_required || 0.5,
-                accept_productivity: !!intermediate_products[dataitem.name],
-                building: building_map[dataitem.category] || building_map["crafting"],
-                input: parseIngredients(dificultInfo.ingredients),
-                output: parseIngredients(dificultInfo.result || dificultInfo.results, dificultInfo.result_count)
-            });
+            if(!!dataitem.normal){
+                result.push({
+                    id: dataitem.name,
+                    building: building_map[dataitem.category] || building_map["crafting"],
+                    accept_productivity: !!intermediate_products[dataitem.name],
+                    normal: parseDifficulty(dataitem.normal),
+                    expensive: parseDifficulty(dataitem.expensive)
+                });
+            } else {
+                result.push($.extend({
+                        id: dataitem.name,
+                        building: building_map[dataitem.category] || building_map["crafting"],
+                        accept_productivity: !!intermediate_products[dataitem.name]
+                    }                    
+                    ,parseDifficulty(dataitem)
+                ));
+            }
         }
 
         //debugger;
         var existing = JSON.parse(this.collection() || "[]");
         Array.prototype.push.apply(existing, result);
         this.collection(JSON.stringify(existing));
+    }
+
+    function parseDifficulty(item){
+        return {
+            time: item.energy_required || 0.5,
+            input: parseIngredients(item.ingredients),
+            output: parseIngredients(item.result || item.results, item.result_count)
+        }
     }
 
     function parseIngredients(ingredients, item_count) {
